@@ -10,7 +10,7 @@ var options = {
         'x-apikey': config.dbKey,
         'content-type': 'application/json'
     },
-    body: { Name: 'techjamaa1', Value: 'Paid' },
+    body: { Name: 'kenny', Value: 'Not Paid' },
     json: true
 };
 
