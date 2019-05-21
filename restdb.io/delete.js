@@ -1,12 +1,13 @@
 var request = require("request");
 
-var options = { 
+var options = {
     method: 'DELETE',
     url: 'https://mathee-cfeb.restdb.io/rest/employees/5ce3fe6ff35d25020000779b',
-    headers: 
-    {   'cache-control': 'no-cache',
-        'x-apikey': '5ce3f7ee780a473c8df5ca47',
-        'content-type': 'application/json' 
+    headers:
+    {
+        'cache-control': 'no-cache',
+        'x-apikey': config.dbKey,
+        'content-type': 'application/json'
     }
 };
 
