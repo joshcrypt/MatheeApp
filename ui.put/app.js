@@ -61,22 +61,29 @@ app.post('/', function (req, res) {
             else {
 
                 _id = data[0]._id;
-                console.log(_id);
             }
         }
+
+        console.log(_id);
     }); 
 
     request(put_options, function (error, response, body) {
         console.log(put_options);
+        console.log(body);
 
         if (error) {
             res.render('index', { employee: null, error: 'Error, please try again' });
         }
         else {
+            if (!body || !body.length) {
+                res.render('index', { employee: null, error: 'Error, please try again' });
+            }
+            else{
 
             let responseText = `Employee: ${name} has been updated with value: ${value}!`;
             res.render('index', { employee: responseText, error: null });
 
+            }
         }
     });
 
