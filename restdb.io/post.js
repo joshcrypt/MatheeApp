@@ -1,4 +1,5 @@
-var request = require("request");
+var request = require("request")
+, config = require("./config");
 
 var options = {
     method: 'POST',
