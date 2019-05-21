@@ -1,6 +1,6 @@
-var express = require('express')
-    , bodyParser = require('body-parser')
+var bodyParser = require('body-parser')
     , config = require('./config')
+    , express = require('express')
     , request = require("request")
     , where = require("lodash.where");
 
