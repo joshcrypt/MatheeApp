@@ -1,6 +1,6 @@
-npm install
+## Commands
 
-After modules install run the follwoing commands at preference:
+### npm install
 
 ##### post data
 ### node post.js
