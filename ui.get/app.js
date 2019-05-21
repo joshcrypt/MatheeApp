@@ -17,7 +17,7 @@ app.get('/', function (req, res) {
 
 app.post('/', function (req, res) {
 
-    var name = req.body.name;
+    var name = req.body.Name;
 
     var options = {
         method: 'GET',

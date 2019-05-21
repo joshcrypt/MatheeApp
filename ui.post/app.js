@@ -21,8 +21,6 @@ app.post('/', function (req, res) {
     var name = req.body.Name;
     var value = req.body.Value;
 
-    console.log(data);
-
     var options = {
         method: 'POST',
         url: config.url,

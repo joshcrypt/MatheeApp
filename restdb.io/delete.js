@@ -3,7 +3,7 @@ var request = require("request")
 
 var options = {
     method: 'DELETE',
-    url: config.url +'/5ce45962f35d2502000087ea',
+    url: config.url +'/5ce459d5f35d2502000087ec',
     headers:
     {
         'cache-control': 'no-cache',
