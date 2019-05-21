@@ -21,7 +21,7 @@ app.post('/', function (req, res) {
 
     var options = {
         method: 'GET',
-        url: 'https://mathee-cfeb.restdb.io/rest/employees',
+        url: config.url,
         headers:
         {
             'cache-control': 'no-cache',
@@ -39,7 +39,7 @@ app.post('/', function (req, res) {
             var data = where(employee, { "Name": name });
 
             if (!data || !data.length) {
-                res.render('index', { employee: null, error: 'User does not exist. Kindly check the spelling!' });
+                res.render('index', { employee: null, error: 'Employee ' + name + ' does not exist. Kindly check the spelling!' });
             }
             else {
 

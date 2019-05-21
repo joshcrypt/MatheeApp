@@ -3,7 +3,7 @@ var request = require("request")
 
 var options = {
     method: 'PUT',
-    url: 'https://mathee-cfeb.restdb.io/rest/employees/5ce3fe6ff35d25020000779b',
+    url: config.url + '/5ce3fe6ff35d25020000779b',
     headers:
     {
         'cache-control': 'no-cache',

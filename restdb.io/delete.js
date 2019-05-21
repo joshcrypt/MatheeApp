@@ -3,7 +3,7 @@ var request = require("request")
 
 var options = {
     method: 'DELETE',
-    url: 'https://mathee-cfeb.restdb.io/rest/employees/5ce40166f35d25020000779c',
+    url: config.url +'/5ce40166f35d25020000779c',
     headers:
     {
         'cache-control': 'no-cache',

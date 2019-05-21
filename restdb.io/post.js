@@ -3,7 +3,7 @@ var request = require("request")
 
 var options = {
     method: 'POST',
-    url: 'https://mathee-cfeb.restdb.io/rest/employees',
+    url: config.url,
     headers:
     {
         'cache-control': 'no-cache',
