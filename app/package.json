@@ -1,10 +1,11 @@
 {
-  "name": "ui.get",
+  "name": "ui.all",
   "version": "1.0.0",
-  "description": "ui",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [
     "ui"
@@ -15,8 +16,9 @@
     "body-parser": "^1.19.0",
     "ejs": "^2.6.1",
     "express": "^4.17.0",
-    "lodash": "^4.17.11",
+    "localStorage": "^1.0.4",
     "lodash.where": "^3.1.0",
+    "memorystorage": "^0.11.0",
     "request": "^2.88.0"
   }
 }
