@@ -75,7 +75,7 @@ app.post('/get', function (req, res) {
             var data = where(employee, { "Name": name });
 
             if (!data || !data.length) {
-                res.render('index', { employee: null, error: 'Employee ' + name + ' does not exist. Kindly check the spelling!' });
+                res.render('index', { employee: null, error: 'Employee ' + name + ' does not exist.' });
             }
             else {
 
@@ -140,13 +140,39 @@ app.post('/update', function (req, res) {
     };
 
     request(options, function (error, response, body) {
-        console.log(options);
 
         if (error) {
             res.render('index', { employee: null, error: 'Error, please try again' });
         }
         else {
             let responseText = `Employee: ${name} has been updated with value: ${value}!`;
+            res.render('index', { employee: responseText, error: null });
+        }
+    });
+
+})
+
+app.post('/delete', function (req, res) {
+
+    var name = req.body.Name;
+
+    var options = {
+        method: 'DELETE',
+        url: config.url + '/' + storage.getItem(name),
+        headers:
+        {
+            'cache-control': 'no-cache',
+            'x-apikey': config.dbKey
+        }
+    };
+
+    request(options, function (error, response, body) {
+
+        if (error) {
+            res.render('index', { employee: null, error: 'Error, please try again' });
+        }
+        else {
+            let responseText = `Employee: ${name} has been deleted!`;
             res.render('index', { employee: responseText, error: null });
         }
     });
