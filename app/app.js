@@ -172,6 +172,7 @@ app.post('/delete', function (req, res) {
             res.render('index', { employee: null, error: 'Error, please try again' });
         }
         else {
+            storage.removeItem(name);
             let responseText = `Employee: ${name} has been deleted!`;
             res.render('index', { employee: responseText, error: null });
         }
