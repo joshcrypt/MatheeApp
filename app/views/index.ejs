@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Test</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="container">
+    <fieldset>
+      <% if(employee !== null){ %>
+      <b>
+        <p><%= employee %></p>
+      </b>
+      <% } %>
+
+      <% if(error !== null){ %>
+      <b>
+        <p><%= error %></p>
+      </b>
+      <% } %>
+      <br />
+      <p>Search For Employee</p>
+      <form action="/get" method="post">
+        <input name="Name" type="text" class="ghost-input" placeholder="Enter a name" required>
+        <input type="submit" class="ghost-button" value="Search">
+      </form>
+      <br />
+      <p>Save Employee Value</p>
+      <form action="/post" method="post">
+        <input name="Name" type="text" class="ghost-input" placeholder="Enter a name" required>
+        <select name="Value">
+          <option>Select Value</option>
+          <option value="Paid">Paid</option>
+          <option value="Not Paid">Not Paid</option>
+        </select>
+        <input type="submit" class="ghost-button" value="Save">
+      </form>
+      <br />
+      <p>Update Employee Value</p>
+      <form action="/update" method="post">
+        <input name="Name" type="text" class="ghost-input" placeholder="Enter a name" required>
+        <select name="Value">
+          <option>Select Value</option>
+          <option value="Paid">Paid</option>
+          <option value="Not Paid">Not Paid</option>
+        </select>
+        <input type="submit" class="ghost-button" value="Update">
+      </form>
+      <br />
+      <p>Delete Employee (This action has no prompt!!!)</p>
+      <form action="/delete" method="post">
+        <input name="Name" type="text" class="ghost-input" placeholder="Enter a name" required>
+        <input type="submit" class="ghost-button" value="Delete">
+      </form>
+    </fieldset>
+  </div>
+</body>
+
+</html>
